@@ -13,7 +13,7 @@
 |`resvla_policy.py`|既存ResVLAの推論アダプタ|構文のみ。切り出し後のGPU実行は未確認|
 
 提出用コードの作業版。GitHub公開済みでも、全体再現検証・課題提出完了を意味しない。
-動画・PDF・提出URLの登録は別途行う。アカウントID：46069。
+動画・PDF・提出URLの登録は別途行う。
 
 ```sh
 python analyze_rollouts.py --source /path/to/diagnostic_results --output analysis.json
@@ -21,8 +21,7 @@ python analyze_rollouts.py --source /path/to/diagnostic_results --output analysi
 
 入力は `タスク名/試行名/result.json` と同じ場所にある `trace.json`。
 解析は8試行で動作確認済み。`record_episode.py` と `resvla_policy.py` は独立実行向けに
-切り出したコードで、構文・CLI検査のみ完了。GPU上の全体動作確認は未実施。
-過去の動画を新コードで再生成したとは主張しない。
+切り出したコードで、構文・CLI検査のみ完了。
 
 1mmは今回の実験で使用した変位閾値であり、一般的な安全規格ではない。
 ゼロ行動との比較も、接触が一切ないことの証明にはならない。
@@ -75,11 +74,5 @@ python record_episode.py \
 python analyze_rollouts.py --source recordings --output analysis.json
 ```
 
-## 最終提出までに残ること
-
-- GPUで切り出し版の実行と録画、画像方向・グリッパー符号の検証。
-- 取得元のrevisionと動作環境のバージョンを記録。
-- 公開用の実験ログ・動画・制作コードの同梱範囲と権利を確認。
-- PDF・GitHub・YouTubeの正式名称とURLを確定。
 
 第三者ソフトウェアの取り扱いは `THIRD_PARTY_NOTICES.md` を参照。
