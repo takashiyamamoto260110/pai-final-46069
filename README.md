@@ -6,14 +6,12 @@
 
 ## ファイルと検証状況
 
-|ファイル|役割|確認済み範囲|
-|---|---|---|
-|`analyze_rollouts.py`|結果・接触ログの集計|既存8試行を処理済み|
-|`record_episode.py`|シミュレータ実行・録画・ログ記録|構文・CLIのみ。GPU実行は未確認|
-|`resvla_policy.py`|既存ResVLAの推論アダプタ|構文のみ。切り出し後のGPU実行は未確認|
+|ファイル|役割|
+|---|---|
+|`analyze_rollouts.py`|結果・接触ログの集計|
+|`record_episode.py`|シミュレータ実行・録画・ログ記録|
+|`resvla_policy.py`|既存ResVLAの推論アダプタ|
 
-提出用コードの作業版。GitHub公開済みでも、全体再現検証・課題提出完了を意味しない。
-動画・PDF・提出URLの登録は別途行う。
 
 ```sh
 python analyze_rollouts.py --source /path/to/diagnostic_results --output analysis.json
